@@ -1,0 +1,480 @@
+:root{
+    --orange: #E04D01;
+    --darkblue: #001D6E;
+    --black: #1B1A17;
+    --lightgrey: #ECECEC;
+    --lightblue: #00B4D8;
+    --neongreen: #06FF00;
+    --verydarkblue: #2A2550;
+    --red: #F32424;
+    --gold: #F0A500;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 2px;
+}
+
+
+
+/*Styling the navbar*/
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    padding: 20px;
+    top: 0;
+    background-color: var(--verydarkblue);
+    /* position: fixed; */
+    z-index: 9999;
+    box-shadow: 0.8px 0.8px 10px black;
+}
+
+@media (max-width: 800px){
+    .navbar{
+        justify-content: space-between;
+    }
+}
+
+#toggler, 
+.navbar label{
+    display: none;
+}
+
+#home-link{
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    color: var(--orange);
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link{
+    margin: 0 20px 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--orange);
+}
+
+.nav-link:hover{
+    color: var(--lightgrey);
+    border-bottom: 5px solid var(--orange);
+    transition: 0.3s;
+}
+
+/* End of styling navbar*/
+
+#btn{
+    bottom: 10px;
+    position: fixed;
+   
+}
+
+.sections{
+    border-bottom: 5px solid var(--lightgrey);
+}
+
+#home{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f3f3;
+    background: url('../images/cool-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 1000px 700px;
+    background-position: right bottom; */
+}
+
+
+.description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#education{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding: 2%;
+    background-image: url('../images/college.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#college-img{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    left: 60%;
+}
+
+.my-edu{
+    margin: 0;
+    font-size: 3em;
+}
+
+/* Certification section */
+#certificates{
+    width: 100%;
+    height: 150vh;
+    background-color: white;
+    padding: 2%;
+}
+
+
+.certificate-contents{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5%; */
+}
+
+
+.certi-card{
+    width: 25%;
+    height: 60vh;
+    border-radius: 1em;
+    box-shadow: 5px 5px 10px grey;
+    padding: 20px;
+    text-align: center;
+    background-color: #f3f3f3;
+    margin: 10px;
+}
+
+.certi-img{
+    max-width: 100%;
+    overflow: hidden;
+    height: 25vh;
+    object-fit: cover;
+}
+
+.certi-title{
+    text-transform: capitalize;
+}
+
+.org-link,
+.certificate-link{
+    text-decoration: none;
+    color: #D67D3E;
+}
+
+/* End of certificate section */
+
+/*Skills section*/
+#skills{
+    padding: 2%;
+    
+}
+.contents{
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    left: 5%;
+}
+
+@media screen and (max-width: 680px){
+    .contents{
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        left: 15%;
+    }
+}
+
+.skill-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 60px;
+    width: 250px;
+    margin: 10px;
+    background-color: #EDEDED;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0px 20px 0px 20px;
+    border-radius: 0.5em;
+}
+.skill-name{
+    display: inline;
+}
+
+.skill-img{
+    height: 70px;
+    width: 70px;
+    display: inline;
+}
+
+.skill-card:hover{
+    cursor: pointer;
+}
+
+/*End of skills section*/
+/* #projects{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+} */
+
+#resume{
+    padding: 2%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    /* text-align: center; */
+    background-image: url('../images/37007.jpg');
+    background-size: 800px 600px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    
+}
+
+.resume-download-div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.visits-count{
+    position: relative;
+    margin-left: auto;
+    color: white;
+}
+
+#visits{
+    color: #06FF00;
+}
+
+@media (max-width: 800px){
+    .resume-download-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .res-btn{
+        margin: 10px;
+    }
+}
+
+.res-btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 3em;
+    cursor: pointer;
+    margin-left: 100px;
+    text-transform: uppercase;
+    border: none;
+}
+
+#resume-docx{
+    background-color: #035397;
+    box-shadow: 1px 1px 10px var(--black);   
+}
+
+#resume-docx:hover{
+    box-shadow: 2px 2px 20px var(--lightblue);
+    transition: 0.2s;
+}
+
+#resume-pdf{
+    background-color: var(--red);
+    box-shadow: 1px 1px 10px var(--black);
+}
+
+#resume-pdf:hover{
+    box-shadow: 2px 2px 20px red;
+    transition: 0.2s;
+}
+
+#resume-title{
+    display: flex;
+    text-align: left;
+    justify-self: left;
+    justify-items: flex-start;
+}
+
+.download-link{
+    width: 100%;
+    text-decoration: none;
+    color: #f3f3f3;
+    font-weight: bold;
+}
+
+#contact{
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    padding-left: 2%;
+    background-image: url('../images/3459559.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#contact-details{
+    margin: 10px;
+}
+
+.contact-details{
+     display: flex;
+    justify-content: center;
+}
+
+table{
+    border-spacing: 50px;
+}
+
+/* .outer{
+    position: relative;
+    top: -30px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    display: inline-block;
+}
+
+.inner{
+    position: relative;
+    width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid white;
+    top: 30px;
+}
+
+.wrapper{
+    display: none;
+}
+
+.contact-details{
+    position: relative;
+    top: 40%;
+} */
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--verydarkblue);
+    padding: 3%;
+}
+
+#footer-title{
+    color: white;
+}
+
+footer>ul{
+    list-style-type: none;
+}
+
+footer>ul>li>a{
+    text-decoration: none;
+    color: var(--gold);
+}
+
+/* Media queries for mobile devices and tablets */
+@media (max-width: 800px) and (orientation: portrait){
+    .navbar{
+        position: fixed;
+    }
+    #certificates{
+        height: auto;
+    }
+    
+    .certificate-contents{
+        flex-direction: column;
+        width: 100vw;
+        padding: 0;
+    }
+
+    .certi-card{
+        width: 80vw;
+        max-height: 55vh;
+        margin: 5px;
+    }
+
+    .certi-title{
+        margin: 5px auto 5px auto;
+    }
+    .certificate-link{
+        margin: 5px auto 5px auto;
+    }
+    #education{
+        background: none;
+    }
+}
+
+
+/* Media query for navigation bar */
+@media (max-width: 1400px){
+    .menu{
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+    .list{
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .navbar label{
+      display: inline;
+      align-items: center;
+      cursor: pointer;
+    }
+    #toggler:checked ~ .menu{
+      max-height: 100%;
+    }
+    .nav-link:hover{
+        color: var(--lightgrey);
+        border-bottom: 5px solid var(--orange);
+        transition: 0.3s;
+        width: 100%;
+    }
+
+
+}
+  
